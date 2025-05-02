@@ -1,4 +1,14 @@
 # overseerr.rules
 
 Download Requests:
-- Confirm title, year, media_type...
+- Confirm title, year, media_type
+- Check if request already exists
+- Send to Overseerr API
+- Route:
+  - Movies → Radarr
+  - TV Shows → Sonarr
+
+Respond with:
+- Request success
+- Already requested
+- Not found / error

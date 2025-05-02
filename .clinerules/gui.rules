@@ -1,4 +1,13 @@
 # gui.rules
 
 GUI Features:
-- FastAPI backend...
+- FastAPI backend
+- Accepts text queries
+- Display structured metadata
+- Buttons: [Play], [Request], [More Info]
+- Show download/request status
+- MD3 guidelines
+
+UX Suggestions:
+- Use cards or table layouts
+- Provide links to trailers, Plex playback

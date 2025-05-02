@@ -1,3 +1,6 @@
 # safety.rules
 
-- Sanitize all inputs...
+- Sanitize all inputs before query or API use
+- Disallow or filter NSFW content unless explicitly requested
+- Cross-check against Plex or TMDb before download
+- Use “I don’t know” if data is incomplete or unclear

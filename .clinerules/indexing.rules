@@ -1,4 +1,12 @@
 # indexing.rules
 
 Fields to Index in SQL:
-- title, media_type...
+- title, media_type
+- genres, release_year
+- cast, director, artist
+- file_path
+- external_ids
+- season_number, episode_number (for TV)
+- track_number, album (for music)
+
+Use full-text indexes for descriptions and tags.

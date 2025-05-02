@@ -1,4 +1,17 @@
 # query.rules
 
 Query Intent Categories:
-- Retrieval (filters)...
+- Retrieval (filters)
+- Recommendation
+- Metadata Lookup
+- Download Request
+
+Process:
+1. Parse user input for media type and filters
+2. Map to SQL filters or vector search via Langchain
+3. Return a structured list or friendly output
+
+Examples:
+- “Find 80s sci-fi movies under 2 hours”
+- “Show all unwatched TV shows”
+- “What songs by Daft Punk do I have?”

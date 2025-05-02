@@ -1,4 +1,15 @@
 # metadata/movies.rules
 
 Fields for Movies:
-- id, title, original_title...
+- id, title, original_title
+- summary, tagline, genres, keywords, collections
+- release_year, release_date
+- runtime_minutes, aspect_ratio
+- studio, production_companies
+- directors, writers, producers
+- cast (actor, character), voice_actors
+- content_rating, audio_languages, subtitle_languages
+- file_path, file_size, format, codec, resolution
+- rating (IMDb, TMDb, Rotten Tomatoes), Plex rating
+- user_rating, watch_count, last_played
+- external_ids (IMDb, TMDb), added_date, updated_date

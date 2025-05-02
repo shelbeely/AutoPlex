@@ -1,4 +1,15 @@
 # recommendation.rules
 
 Recommendation Flow:
-- Analyze user watch/listen history...
+- Analyze user watch/listen history
+- Use embedding similarity or genre/creator overlap
+- Generate rationale for each suggestion
+- Allow user to confirm with “yes” or “queue it”
+
+Format:
+{
+  "title": "Tenet",
+  "reason": "You liked Inception's cerebral themes and visuals.",
+  "media_type": "movie",
+  "year": 2020
+}

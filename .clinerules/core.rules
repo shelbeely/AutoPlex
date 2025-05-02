@@ -1,4 +1,9 @@
 # core.rules
 
 ## Project Overview
-This LLM system integrates Plex, Overseerr, Sonarr, Radarr, FastAPI, Langchain, SQL, and OpenRouter...
+This LLM system integrates Plex, Overseerr, Sonarr, Radarr, FastAPI, Langchain, SQL, and OpenRouter. It extracts metadata from all Plex libraries, stores it in a SQL database with indexing, and supports LLM-based natural language queries and recommendations through a FastAPI GUI.
+
+## Media Types Supported
+- Movies
+- TV Shows (Seasons + Episodes)
+- Music

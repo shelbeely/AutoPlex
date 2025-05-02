@@ -1,3 +1,33 @@
 # radarr.rules
 
-Handles movie download automation through Radarr...
+## Purpose
+Handles movie download automation and tracking through Radarr.
+
+## Trigger Conditions
+- User approves a recommended movie.
+- User manually requests a title via GUI.
+- Overseerr request is approved.
+
+## Metadata Required
+- title
+- year
+- TMDB ID
+- quality profile
+- minimum availability (e.g., released)
+- root folder path
+- monitored (bool)
+- tags (optional)
+
+## Expected API Usage
+- GET /api/v3/movie/{tmdbId} to check existence.
+- POST /api/v3/movie to create a new movie entry.
+- POST /api/v3/command with "type": "MoviesSearch" to begin search/download.
+
+## Safety Checks
+- Verify that Radarr is reachable.
+- Avoid duplicates by checking existing movies by TMDB ID or title.
+- Ensure quality profile exists in Radarr settings.
+
+## UX Notes
+- Confirm title and year before submission.
+- Option to auto-search or only add to library.

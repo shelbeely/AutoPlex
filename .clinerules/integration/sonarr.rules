@@ -1,3 +1,37 @@
 # sonarr.rules
 
-Handles TV show download automation through Sonarr...
+## Purpose
+Handles integration with Sonarr for automating TV show downloads via Overseerr.
+
+## Trigger Conditions
+- User accepts a TV show recommendation.
+- Explicit user command (e.g., "Download all of Season 2").
+- Overseerr approves a TV show request.
+
+## Metadata Required
+- title
+- year
+- TVDB ID or TMDB ID
+- number of seasons
+- number of episodes (if applicable)
+- quality profile
+- language
+- root folder path
+- monitored (bool)
+- tags (optional)
+
+## Expected API Usage
+- POST /api/v3/series to create a monitored show.
+- POST /api/v3/episode to control specific episodes.
+- GET /api/v3/series/{id} for status and metadata.
+- POST /api/v3/command with "type": "SeriesSearch" to initiate search.
+
+## Safety Checks
+- Verify that Sonarr is reachable.
+- Check if the series already exists.
+- Validate quality profile against user preference.
+- Avoid duplicate requests.
+
+## UX Notes
+- Inform user of missing metadata.
+- Allow toggling between monitored/unmonitored per season.

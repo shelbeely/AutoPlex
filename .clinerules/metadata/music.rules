@@ -1,4 +1,12 @@
 # metadata/music.rules
 
 Fields for Music:
-- id, title, album, artist...
+- id, title, album, artist, album_artist
+- track_number, disc_number
+- genres, tags, lyrics
+- release_year, release_date, duration_seconds
+- composers, producers, featured_artists
+- audio_codec, bitrate, sample_rate, channels
+- file_path, file_size
+- play_count, last_played
+- user_rating, album_art_url
