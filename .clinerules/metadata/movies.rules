@@ -1,0 +1,4 @@
+# metadata/movies.rules
+
+Fields for Movies:
+- id, title, original_title...

@@ -1,0 +1,4 @@
+# core.rules
+
+## Project Overview
+This LLM system integrates Plex, Overseerr, Sonarr, Radarr, FastAPI, Langchain, SQL, and OpenRouter...

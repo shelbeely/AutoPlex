@@ -1,0 +1,4 @@
+# indexing.rules
+
+Fields to Index in SQL:
+- title, media_type...
