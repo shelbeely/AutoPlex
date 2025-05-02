@@ -1,5 +1,7 @@
 # sonarr.rules
 
+See core.rules for documentation standards.
+
 ## Purpose
 Handles integration with Sonarr for automating TV show downloads via Overseerr.
 

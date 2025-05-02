@@ -1,5 +1,7 @@
 # overseerr.rules
 
+See core.rules for documentation standards.
+
 Download Requests:
 - Confirm title, year, media_type
 - Check if request already exists

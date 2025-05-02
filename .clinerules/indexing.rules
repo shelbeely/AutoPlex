@@ -1,12 +1,17 @@
 # indexing.rules
 
-Fields to Index in SQL:
-- title, media_type
-- genres, release_year
-- cast, director, artist
-- file_path
-- external_ids
-- season_number, episode_number (for TV)
-- track_number, album (for music)
+## Documentation Standards
+See core.rules for documentation standards.
 
-Use full-text indexes for descriptions and tags.
+## Fields to Index in SQL:
+- **title**, **media_type** 🎬
+- **genres**, **release_year** 📅
+- **cast**, **director**, **artist** 🎭
+- **file_path** 🗂️
+- **external_ids** 🔗
+- **season_number**, **episode_number** (for TV) 📺
+- **track_number**, **album** (for music) 🎵
+
+**Pro Tip:** Full-text indexes work like sprinkles on cupcakes - they make searching for descriptions and tags extra sweet! 🌈
+
+**Fun Fact:** The first DVD could hold 4.7GB of data - that's like 700 floppy disks! 🎉

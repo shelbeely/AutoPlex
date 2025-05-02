@@ -1,0 +1,50 @@
+# llm.rules
+
+See core.rules for documentation standards.
+
+## Purpose
+Defines how AutoPlex uses Qwen 3 23B A22B via OpenRouter.ai for all LLM-driven tasks such as query translation, recommendations, and search.
+
+## Model Info
+- qwen/qwen3-235b-a22b:free (OpenRouter.ai)
+- Integrated with Langchain
+- Used in agents and chains
+
+## Responsibilities
+- Natural-language to SQL translation
+- Recommendation generation
+- Query intent parsing
+- User-specific chat history memory
+- Triggering requests via tool use
+- (optional) Text embeddings for vector store (if supported)
+
+## Prompting
+- Provide full system context: media types, DB schema, tools
+- Prime with few-shot examples
+- Request structured JSON for tool actions or SQL
+
+## Tools
+- `query_db(query: str)`
+- `recommend(user_id: str)`
+- `request_media(title, media_type, year)`
+
+## Output Policy
+- Sanitize SQL
+- Validate all outputs with schema
+- Never hallucinate media entries
+
+## Vector/RAG Support
+- Use summary + cast + genres for embeddings
+- Embed all media on ingest
+- RAG layer adds context before LLM prompt
+- Use cosine similarity for retrieval
+- Optional fallback to full-text SQL
+
+## Safety
+- No shell, no file system access
+- Never guess metadata
+- Prompt injection guarded by sanitizer
+
+## Logging
+- Log prompt, model, output, latency, token usage
+- Store failed outputs for debugging

@@ -1,6 +1,8 @@
 # metadata/tv.rules
 
-Fields for TV Shows:
+See core.rules for documentation standards.
+
+## Fields for TV Shows
 - id, title, original_title
 - summary, tagline, genres, keywords
 - first_air_date, last_air_date
@@ -12,13 +14,3 @@ Fields for TV Shows:
 - ratings (IMDb, TMDb, Plex), user_rating
 - content_rating, audio/subtitle languages
 - external_ids, file_path, total_file_size
-
-Seasons:
-- season_number, episode_count, aired_year, summary
-
-Episodes:
-- episode_number, title, air_date
-- summary, guest_stars
-- directors, writers
-- runtime, watch_count, last_played
-- file_path, resolution, user_rating

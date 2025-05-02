@@ -1,6 +1,9 @@
 # gui.rules
 
-GUI Features:
+## Documentation Standards
+See core.rules for documentation standards.
+
+## GUI Features:
 - FastAPI backend
 - Accepts text queries
 - Display structured metadata

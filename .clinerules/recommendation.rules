@@ -1,6 +1,8 @@
 # recommendation.rules
 
-Recommendation Flow:
+See core.rules for documentation standards.
+
+## Recommendation Flow:
 - Analyze user watch/listen history
 - Use embedding similarity or genre/creator overlap
 - Generate rationale for each suggestion

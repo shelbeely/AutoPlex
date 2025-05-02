@@ -1,6 +1,8 @@
 # metadata/movies.rules
 
-Fields for Movies:
+See core.rules for documentation standards.
+
+## Movie Metadata Fields
 - id, title, original_title
 - summary, tagline, genres, keywords, collections
 - release_year, release_date

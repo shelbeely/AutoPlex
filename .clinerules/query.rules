@@ -1,6 +1,9 @@
 # query.rules
 
-Query Intent Categories:
+## Documentation Standards
+See core.rules for documentation standards.
+
+## Query Intent Categories:
 - Retrieval (filters)
 - Recommendation
 - Metadata Lookup

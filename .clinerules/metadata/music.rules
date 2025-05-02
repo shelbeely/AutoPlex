@@ -1,6 +1,8 @@
 # metadata/music.rules
 
-Fields for Music:
+See core.rules for documentation standards.
+
+## Fields for Music
 - id, title, album, artist, album_artist
 - track_number, disc_number
 - genres, tags, lyrics

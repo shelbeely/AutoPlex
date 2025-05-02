@@ -1,9 +1,39 @@
 # core.rules
 
+## Documentation Standards
+All documentation and code comments should:
+- Maintain a quirky trans femme aesthetic
+- Include "Beginner's Tip" callouts for accessibility
+- Use bold headers and bullet points for scannability
+- End with a fun fact about media storage formats
+
 ## Project Overview
 This LLM system integrates Plex, Overseerr, Sonarr, Radarr, FastAPI, Langchain, SQL, and OpenRouter. It extracts metadata from all Plex libraries, stores it in a SQL database with indexing, and supports LLM-based natural language queries and recommendations through a FastAPI GUI.
 
-## Media Types Supported
-- Movies
-- TV Shows (Seasons + Episodes)
-- Music
+## Goal
+AutoPlex is an intelligent media management system. It extracts all metadata from Plex libraries (Movies, TV, Music), stores it in a queryable database, and uses an LLM agent (Qwen 3 23B via OpenRouter) with Langchain for natural querying and recommendations. Overseerr + Sonarr/Radarr handle request pipelines.
+
+## Stack
+- Backend: FastAPI (Python 3.12+)
+- Frontend: Web GUI (likely React or Svelte)
+- Data: SQL (PostgreSQL or SQLite)
+- AI: Langchain + OpenRouter (Qwen 3 23B)
+- Metadata: Plex full library extraction
+- Downloads: Overseerr → Sonarr/Radarr
+- Environment: Virtual environment (venv) with pip required for dependency management
+
+**Beginner's Tip:** Always create a virtual environment and install dependencies! Use `python -m venv venv && source venv/bin/activate && pip install -r requirements.txt` to set it up.
+
+## Design Rules
+- Keep Movies, TV, and Music fully separated in DB
+- Ensure all metadata is deeply indexed (e.g. actors, genres, dates, etc.)
+- Use foreign keys for episodes/seasons to shows
+- Normalize data where appropriate, but denormalize for vector embedding
+- All media must be queriable via natural language
+- LLM interface must support search, recommendations, and media requests
+
+## Agent Behavior
+- The LLM must reason over user context, media history, and vectorized content
+- Recommendations must be explainable and link to request pipelines
+- Must be able to clarify ambiguous queries
+- Avoid hallucinations. Use only DB/RAG content.

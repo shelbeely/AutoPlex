@@ -1,0 +1,58 @@
+# AutoPlex Configuration
+
+# Application Settings
+app:
+  name: AutoPlex
+  host: 0.0.0.0
+  port: 8000
+  debug: true
+  log_level: INFO
+
+# LLM Settings
+llm:
+  model: qwen3-23b
+  embedding_model: all-MiniLM-L6-v2
+  rag_top_k: 5
+  temperature: 0.7
+  max_tokens: 1024
+
+# Database Settings
+database:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  name: autoplex
+  pool_size: 5
+  max_overflow: 2
+
+# Overseerr Settings
+overseerr:
+  host: http://localhost:5055
+  api_key: your_api_key_here
+  request_timeout: 30s
+
+# Sonarr Settings
+sonarr:
+  host: http://localhost:8989
+  api_key: your_api_key_here
+  quality_profile: HD-1080p
+  root_folder: /media/series
+  season_folder: true
+
+# Radarr Settings
+radarr:
+  host: http://localhost:7878
+  api_key: your_api_key_here
+  quality_profile: HD-1080p
+  root_folder: /media/movies
+  movie_folder: true
+
+# Plex Settings
+plex:
+  host: http://localhost:32400
+  token: your_plex_token_here
+  libraries:
+    movies: [1, 2, 3]
+    tv_shows: [4, 5, 6]
+    music: [7, 8, 9]

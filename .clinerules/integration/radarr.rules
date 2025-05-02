@@ -1,5 +1,7 @@
 # radarr.rules
 
+See core.rules for documentation standards.
+
 ## Purpose
 Handles movie download automation and tracking through Radarr.
 
